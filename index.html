@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <!-- 針對行動裝置/iPad 的滿版設定與防止縮放，提供如同 Native App 的滑順手感 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>ㄅㄆㄇ 冒險樂園 - 大班小一注音學習遊戲</title>
+  
+  <!-- PWA 支援 -->
+  <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#FFB84D">
+  
+  <!-- iOS Safari 獨立 App 支援 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="ㄅㄆㄇ樂園">
+  <link rel="apple-touch-icon" href="./icon.png">
+  
+  <!-- CSS 載入 -->
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <!-- 紙花慶祝畫布 -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- 1. 歡迎/解鎖畫面 (防止 iOS 無法發音) -->
+  <div id="welcome-screen" class="welcome-container">
+    <h1 class="welcome-title">ㄅㄆㄇ 冒險樂園</h1>
+    <p class="welcome-subtitle">專為大班升小一設計的注音學習遊戲 🎈</p>
+    
+    <div class="welcome-illustration">
+      <img src="./icon.png" alt="ㄅㄆㄇ 冒險樂園">
+    </div>
+    
+    <button class="start-btn" onclick="enterAdventure()">進入樂園 🎮</button>
+  </div>
+
+  <!-- 2. 主應用程式介面 -->
+  <div id="app-main" class="app-container" style="display: none;">
+    <header>
+      <div class="logo-section">
+        <h1>ㄅㄆㄇ 冒險樂園 🤖</h1>
+      </div>
+      <nav>
+        <button id="nav-keyboard" class="nav-btn active" onclick="switchMode('keyboard')">🔊 點讀鍵盤</button>
+        <button id="nav-robot" class="nav-btn" onclick="switchMode('robot')">🤖 拼音機器人</button>
+        <button id="nav-game" class="nav-btn" onclick="switchMode('game')">🎈 氣球挑戰</button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- 面板 1：點讀鍵盤面板 -->
+      <div id="panel-keyboard" class="mode-panel">
+        <div id="keyboard-grid"></div>
+      </div>
+
+      <!-- 面板 2：拼音大師機器人面板 -->
+      <div id="panel-robot" class="mode-panel" style="display: none;">
+        <div class="robot-layout">
+          <!-- 左側：音軌與聲調選擇器 -->
+          <div class="robot-controls">
+            <div class="control-track">
+              <h4>1. 選擇聲母 (第一步)</h4>
+              <div class="scroll-keys-row" id="robot-initials"></div>
+            </div>
+            <div class="control-track">
+              <h4>2. 選擇介音 (第二步)</h4>
+              <div class="scroll-keys-row" id="robot-medials"></div>
+            </div>
+            <div class="control-track">
+              <h4>3. 選擇韻母 (第三步)</h4>
+              <div class="scroll-keys-row" id="robot-finals"></div>
+            </div>
+            <div class="control-track">
+              <h4>4. 選擇聲調 (第四步)</h4>
+              <div class="scroll-keys-row" id="robot-tones"></div>
+            </div>
+          </div>
+          
+          <!-- 右側：拼音機器人面板本體 -->
+          <div class="robot-body-card">
+            <div class="robot-head">
+              <div class="eye"></div>
+              <div class="eye"></div>
+            </div>
+            <div class="robot-screen" id="robot-screen">
+              <!-- 顯示合成結果與圖片 -->
+            </div>
+            <div class="robot-spelling-display">
+              <div id="robot-display-initial" class="char-slot slot-init"></div>
+              <div id="robot-display-medial" class="char-slot slot-med"></div>
+              <div id="robot-display-final" class="char-slot slot-fin"></div>
+              <div id="robot-display-tone" class="char-slot slot-tone"></div>
+            </div>
+            <button class="action-btn" onclick="startRobotSpelling()">拼音機器人發音 🗣️</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 面板 3：氣球問答挑戰面板 -->
+      <div id="panel-game" class="mode-panel" style="display: none;">
+        <div class="game-header">
+          <div class="stars-board">獲得星星：<span id="stars-container"></span></div>
+          <button class="nav-btn" onclick="nextBalloonQuestion()">換一題 ➔</button>
+        </div>
+        <div id="game-canvas-area">
+          <!-- 遊戲互動區：渲染氣球或拼音字卡 -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- JavaScript 載入 -->
+  <script src="./game.js"></script>
+</body>
+</html>

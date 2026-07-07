@@ -1,0 +1,16 @@
+{
+  "name": "ㄅㄆㄇ 冒險樂園",
+  "short_name": "ㄅㄆㄇ樂園",
+  "description": "專為大班升小一設計的注音與拼音學習遊戲",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#FFF9F2",
+  "theme_color": "#FFB84D",
+  "icons": [
+    {
+      "src": "./icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
