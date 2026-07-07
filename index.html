@@ -41,7 +41,7 @@
     <header>
       <div class="logo-section">
 <h1>ㄅㄆㄇ 冒險樂園 🤖</h1>
-        <div class="version-info">Version: <span id="version-info"></span></div>
+        <div class="version-info">Version: 2026-07-07 15:33</div>
       </div>
       <nav>
         <button id="nav-keyboard" class="nav-btn active" onclick="switchMode('keyboard')">🔊 點讀鍵盤</button>
@@ -114,15 +114,5 @@
 
   <!-- JavaScript 載入 -->
   <script src="./game.js"></script>
-<script>
-  // Set version/date-time of the UI
-  const verEl = document.getElementById('version-info');
-  if (verEl) {
-    const now = new Date();
-    // Format as YYYY-MM-DD HH:mm (local time)
-    const pad = n => n.toString().padStart(2, '0');
-    const formatted = `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
-    verEl.textContent = formatted;
-  }
-</script></body>
+</body>
 </html>

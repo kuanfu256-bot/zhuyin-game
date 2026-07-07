@@ -636,7 +636,35 @@ function selectRobotKey(type, value) {
   updateRobotDisplay();
 }
 
+
+function filterRobotOptions() {
+  const init = robotState.initial || '-';
+  const med = robotState.medial || '-';
+  const fin = robotState.final || '-';
+
+  const validCombs = Object.keys(SPELLING_DICT).map(k => k.split('|'));
+
+  document.querySelectorAll('#robot-initials .robot-btn:not(.empty-btn)').forEach(btn => {
+    const key = btn.id.replace('robot-key-', '');
+    const isValid = validCombs.some(c => c[0] === key && (med === '-' || c[1] === med) && (fin === '-' || c[2] === fin));
+    btn.classList.toggle('disabled', !isValid);
+  });
+
+  document.querySelectorAll('#robot-medials .robot-btn:not(.empty-btn)').forEach(btn => {
+    const key = btn.id.replace('robot-key-', '');
+    const isValid = validCombs.some(c => (init === '-' || c[0] === init) && c[1] === key && (fin === '-' || c[2] === fin));
+    btn.classList.toggle('disabled', !isValid);
+  });
+
+  document.querySelectorAll('#robot-finals .robot-btn:not(.empty-btn)').forEach(btn => {
+    const key = btn.id.replace('robot-key-', '');
+    const isValid = validCombs.some(c => (init === '-' || c[0] === init) && (med === '-' || c[1] === med) && c[2] === key);
+    btn.classList.toggle('disabled', !isValid);
+  });
+}
+
 function updateRobotDisplay() {
+  filterRobotOptions();
   const init = robotState.initial || "-";
   const med  = robotState.medial  || "-";
   const fin  = robotState.final   || "-";
