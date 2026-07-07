@@ -888,3 +888,7 @@ nav {
   pointer-events: none;
   display: none;
 }
+
+.robot-controls, .control-track, .robot-right-col {
+  min-width: 0;
+}
