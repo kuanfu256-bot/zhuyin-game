@@ -573,7 +573,7 @@ function renderKeyboard() {
 // ==========================================
 // 模式 2：拼音機器人功能
 // ==========================================
-let robotState = { initial: "", medial: "", final: "", tone: "1" };
+let robotState = { initial: "", medial: "", final: "", tone: "" };
 
 function renderRobot() {
   renderRobotGroup("robot-initials", "initial", "btn-init");
@@ -582,13 +582,13 @@ function renderRobot() {
 
   const toneGroup = document.getElementById("robot-tones");
   if (toneGroup) {
-    toneGroup.innerHTML = "";
+    toneGroup.innerHTML = `<button class="robot-btn empty-btn" onclick="selectRobotKey(\'tone\',\'\')">無</button>`;
     TONES.forEach(tone => {
       toneGroup.innerHTML += `<button class="robot-btn btn-tone" id="robot-tone-${tone.symbol}" onclick="selectRobotKey('tone','${tone.symbol}')">${tone.display}</button>`;
     });
   }
   // 預設選一聲
-  selectRobotKey("tone", "1");
+  selectRobotKey("tone", "");
   updateRobotDisplay();
 }
 
@@ -637,28 +637,56 @@ function selectRobotKey(type, value) {
 }
 
 
+
+function isValidZhuyin(init, med, fin) {
+  if (init === '-' && med === '-' && fin === '-') return true;
+
+  const palatals = ['ㄐ', 'ㄑ', 'ㄒ'];
+  if (palatals.includes(init)) {
+    if (med === '-' || med === 'ㄨ') return false;
+  }
+
+  const noYiYu = ['ㄍ', 'ㄎ', 'ㄏ', 'ㄓ', 'ㄔ', 'ㄕ', 'ㄖ', 'ㄗ', 'ㄘ', 'ㄙ'];
+  if (noYiYu.includes(init)) {
+    if (med === 'ㄧ' || med === 'ㄩ') return false;
+  }
+
+  const labials = ['ㄅ', 'ㄆ', 'ㄇ', 'ㄈ'];
+  if (labials.includes(init)) {
+    if (med === 'ㄩ') return false;
+    if (init === 'ㄈ' && med === 'ㄧ') return false;
+    if (med === 'ㄨ' && fin !== '-') return false;
+  }
+
+  if ((init === 'ㄉ' || init === 'ㄊ') && med === 'ㄩ') return false;
+
+  if (med === 'ㄧ' && ['ㄛ', 'ㄨ'].includes(fin)) return false;
+  if (med === 'ㄨ' && ['ㄝ', 'ㄩ'].includes(fin)) return false;
+  if (med === 'ㄩ' && ['ㄜ', 'ㄞ', 'ㄟ', 'ㄠ', 'ㄡ', 'ㄨ'].includes(fin)) return false;
+
+  return true;
+}
+
 function filterRobotOptions() {
   const init = robotState.initial || '-';
   const med = robotState.medial || '-';
   const fin = robotState.final || '-';
 
-  const validCombs = Object.keys(SPELLING_DICT).map(k => k.split('|'));
-
   document.querySelectorAll('#robot-initials .robot-btn:not(.empty-btn)').forEach(btn => {
     const key = btn.id.replace('robot-key-', '');
-    const isValid = validCombs.some(c => c[0] === key && (med === '-' || c[1] === med) && (fin === '-' || c[2] === fin));
+    const isValid = isValidZhuyin(key, med, fin);
     btn.classList.toggle('disabled', !isValid);
   });
 
   document.querySelectorAll('#robot-medials .robot-btn:not(.empty-btn)').forEach(btn => {
     const key = btn.id.replace('robot-key-', '');
-    const isValid = validCombs.some(c => (init === '-' || c[0] === init) && c[1] === key && (fin === '-' || c[2] === fin));
+    const isValid = isValidZhuyin(init, key, fin);
     btn.classList.toggle('disabled', !isValid);
   });
 
   document.querySelectorAll('#robot-finals .robot-btn:not(.empty-btn)').forEach(btn => {
     const key = btn.id.replace('robot-key-', '');
-    const isValid = validCombs.some(c => (init === '-' || c[0] === init) && (med === '-' || c[1] === med) && c[2] === key);
+    const isValid = isValidZhuyin(init, med, key);
     btn.classList.toggle('disabled', !isValid);
   });
 }
