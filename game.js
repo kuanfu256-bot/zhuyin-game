@@ -368,43 +368,64 @@ const SPELLING_DICT = {
   "ㄏ|-|ㄠ|3": { word: "好",  detail: "你好你好", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#F59E0B" text-anchor="middle">好</text>`) },
 
   // ㄐ 相關
-  "ㄐ|ㄧ|1":  { word: "雞",  detail: "小雞唱歌", svg: ZHUYIN_DB["ㄛ"].svg },
+  "ㄐ|ㄧ|-|1": { word: "雞",  detail: "小雞唱歌", svg: ZHUYIN_DB["ㄛ"].svg },
   "ㄐ|ㄧ|ㄠ|3": { word: "腳", detail: "用腳踢球", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#EF4444" text-anchor="middle">腳</text>`) },
+  "ㄐ|ㄧ|ㄢ|3": { word: "剪", detail: "剪刀石頭布", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#3B82F6" text-anchor="middle">剪</text>`) },
 
   // ㄑ 相關
-  "ㄑ|ㄧ|ˋ|4": { word: "氣",  detail: "空氣清新", svg: wrapSvg(`<circle cx="50" cy="50" r="30" fill="#BAE6FD"/><text x="50" y="60" font-size="18" fill="#0369A1" text-anchor="middle" font-weight="bold">空氣</text>`) },
+  "ㄑ|ㄧ|-|4": { word: "氣",  detail: "空氣清新", svg: wrapSvg(`<circle cx="50" cy="50" r="30" fill="#BAE6FD"/><text x="50" y="60" font-size="18" fill="#0369A1" text-anchor="middle" font-weight="bold">空氣</text>`) },
   "ㄑ|ㄧ|ㄡ|2": { word: "球",  detail: "踢足球玩", svg: wrapSvg(`<circle cx="50" cy="50" r="32" fill="#FFF" stroke="#1F2937" stroke-width="3"/><path d="M50 18 L60 38 L80 38 L66 52 L72 72 L50 60 L28 72 L34 52 L20 38 L40 38Z" fill="#1F2937"/>`) },
+  "ㄑ|ㄧ|ㄤ|2": { word: "牆",  detail: "爬上牆壁", svg: wrapSvg(`<rect x="10" y="30" width="80" height="50" fill="#D97706"/><line x1="10" y1="55" x2="90" y2="55" stroke="#92400E" stroke-width="3"/><line x1="50" y1="30" x2="50" y2="80" stroke="#92400E" stroke-width="3"/>`) },
 
   // ㄒ 相關
-  "ㄒ|ㄧ|1":  { word: "西",  detail: "東西南北", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#10B981" text-anchor="middle">西</text>`) },
+  "ㄒ|ㄧ|-|1": { word: "西",  detail: "東西南北", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#10B981" text-anchor="middle">西</text>`) },
   "ㄒ|ㄧ|ㄠ|3": { word: "小", detail: "小小孩子", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#A78BFA" text-anchor="middle">小</text>`) },
+  "ㄒ|ㄧ|ㄣ|1": { word: "心", detail: "愛心心形", svg: ZHUYIN_DB["ㄞ"].svg },
+  "ㄒ|ㄧ|ㄤ|1": { word: "香", detail: "香噴噴的", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#F59E0B" text-anchor="middle">香</text>`) },
 
   // ㄓ 相關
   "ㄓ|-|ㄨ|1": { word: "豬",  detail: "小豬粉粉", svg: wrapSvg(`<circle cx="50" cy="50" r="28" fill="#F9A8D4"/><ellipse cx="50" cy="62" rx="14" ry="10" fill="#FBCFE8"/><circle cx="44" cy="60" r="4" fill="#F472B6"/><circle cx="56" cy="60" r="4" fill="#F472B6"/><circle cx="38" cy="42" r="7" fill="#F9A8D4"/><circle cx="62" cy="42" r="7" fill="#F9A8D4"/><circle cx="42" cy="42" r="3" fill="#1F2937"/><circle cx="58" cy="42" r="3" fill="#1F2937"/>`) },
+  "ㄓ|ㄨ|ㄛ|1": { word: "桌", detail: "桌子椅子", svg: wrapSvg(`<rect x="20" y="38" width="60" height="8" rx="3" fill="#78350F"/><rect x="25" y="46" width="8" height="36" rx="3" fill="#92400E"/><rect x="67" y="46" width="8" height="36" rx="3" fill="#92400E"/>`) },
 
   // ㄔ 相關
   "ㄔ|-|ㄜ|1": { word: "車",  detail: "汽車跑快", svg: wrapSvg(`<rect x="15" y="42" width="70" height="28" rx="5" fill="#EF4444"/><path d="M22 42 L30 26 H70 L78 42Z" fill="#93C5FD"/><circle cx="30" cy="72" r="10" fill="#1F2937"/><circle cx="70" cy="72" r="10" fill="#1F2937"/><circle cx="30" cy="72" r="5" fill="#9CA3AF"/><circle cx="70" cy="72" r="5" fill="#9CA3AF"/>`) },
+  "ㄔ|ㄨ|ㄤ|2": { word: "床", detail: "舒服大床", svg: wrapSvg(`<rect x="10" y="45" width="80" height="35" rx="5" fill="#93C5FD"/><rect x="10" y="32" width="80" height="15" rx="5" fill="#BFDBFE"/><rect x="12" y="78" width="15" height="12" rx="3" fill="#60A5FA"/><rect x="73" y="78" width="15" height="12" rx="3" fill="#60A5FA"/>`) },
 
   // ㄕ 相關
   "ㄕ|-|ㄨ|1": { word: "書",  detail: "看書學習", svg: wrapSvg(`<path d="M15 75 L48 68 L48 22 L15 28Z" fill="#3B82F6"/><path d="M85 75 L52 68 L52 22 L85 28Z" fill="#60A5FA"/><circle cx="30" cy="45" r="5" fill="#FFF"/><circle cx="70" cy="45" r="5" fill="#FFF"/>`) },
   "ㄕ|-|ㄨ|4": { word: "樹",  detail: "大樹高高", svg: wrapSvg(`<rect x="44" y="52" width="12" height="34" fill="#78350F"/><circle cx="50" cy="38" r="28" fill="#10B981"/><circle cx="35" cy="48" r="16" fill="#059669"/><circle cx="65" cy="48" r="16" fill="#34D399"/>`) },
+  "ㄕ|ㄨ|ㄟ|4": { word: "睡", detail: "睡覺好夢", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#818CF8" text-anchor="middle">😴</text>`) },
 
   // ㄖ 相關
-  "ㄖ|-|ˋ|4": { word: "日",  detail: "太陽日曆", svg: ZHUYIN_DB["ㄖ"].svg },
+  "ㄖ|-|ˋ|4":   { word: "日",  detail: "太陽日曆", svg: ZHUYIN_DB["ㄖ"].svg },
+  "ㄖ|-|ㄣ|2":  { word: "人",  detail: "一個人兒", svg: wrapSvg(`<circle cx="50" cy="28" r="14" fill="#F59E0B"/><path d="M50 42 L50 72" stroke="#78350F" stroke-width="8" stroke-linecap="round"/><path d="M28 55 L72 55" stroke="#78350F" stroke-width="8" stroke-linecap="round"/><path d="M50 72 L32 90 M50 72 L68 90" stroke="#78350F" stroke-width="7" stroke-linecap="round"/>`) },
 
   // ㄗ 相關
-  "ㄗ|-|ˋ|4": { word: "字",  detail: "認識文字", svg: ZHUYIN_DB["ㄗ"].svg },
+  "ㄗ|-|-|4":   { word: "字",  detail: "認識文字", svg: ZHUYIN_DB["ㄗ"].svg },
+  "ㄗ|-|ㄡ|3":  { word: "走",  detail: "走路上學", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#10B981" text-anchor="middle">走</text>`) },
 
   // ㄘ 相關
-  "ㄘ|-|ㄠ|3": { word: "草",  detail: "草地綠綠", svg: ZHUYIN_DB["ㄘ"].svg },
+  "ㄘ|-|ㄠ|3":  { word: "草",  detail: "草地綠綠", svg: ZHUYIN_DB["ㄘ"].svg },
+  "ㄘ|-|ㄞ|4":  { word: "菜",  detail: "多吃蔬菜", svg: wrapSvg(`<path d="M25 70 L50 25 L75 70Z" fill="#10B981"/><path d="M35 70 L50 40 L65 70Z" fill="#34D399"/><line x1="50" y1="70" x2="50" y2="90" stroke="#78350F" stroke-width="5"/>`) },
 
   // ㄙ 相關
-  "ㄙ|-|ㄢ|1": { word: "三",  detail: "數字三", svg: wrapSvg(`<text x="50" y="72" font-family="Arial" font-size="62" font-weight="bold" fill="#F472B6" text-anchor="middle">3</text>`) },
+  "ㄙ|-|ㄢ|1":  { word: "三",  detail: "數字三", svg: wrapSvg(`<text x="50" y="72" font-family="Arial" font-size="62" font-weight="bold" fill="#F472B6" text-anchor="middle">3</text>`) },
+  "ㄙ|-|ㄨ|4":  { word: "四",  detail: "數字四", svg: wrapSvg(`<text x="50" y="72" font-family="Arial" font-size="62" font-weight="bold" fill="#F472B6" text-anchor="middle">4</text>`) },
+  "ㄙ|ㄨ|ㄣ|1": { word: "孫",  detail: "孫子孫女", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#6366F1" text-anchor="middle">孫</text>`) },
 
-  // 介音結合 (ㄧ ㄨ ㄩ) 相關
-  "ㄧ|-|ˊ|2": { word: "魚",  detail: "水裡小魚", svg: ZHUYIN_DB["ㄩ"].svg },
-  "|-|ㄤ|2":  { word: "羊",  detail: "溫馴綿羊", svg: wrapSvg(`<circle cx="50" cy="52" rx="25" ry="22" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><path d="M32 34 Q22 20 30 26 M68 34 Q78 20 70 26" stroke="#78350F" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="40" cy="48" r="4" fill="#1F2937"/><circle cx="60" cy="48" r="4" fill="#1F2937"/><ellipse cx="50" cy="58" rx="6" ry="4" fill="#FCA5A5"/><rect x="35" y="72" width="8" height="18" rx="4" fill="#D1D5DB"/><rect x="57" y="72" width="8" height="18" rx="4" fill="#D1D5DB"/>`) },
-  "ㄩ|-|-|2": { word: "魚",  detail: "水裡小魚", svg: ZHUYIN_DB["ㄩ"].svg }
+  // 介音單獨結合韻母
+  "ㄧ|-|-|1":  { word: "衣",  detail: "穿上衣服", svg: ZHUYIN_DB["ㄧ"].svg },
+  "ㄧ|-|ㄝ|4": { word: "葉",  detail: "一片樹葉", svg: ZHUYIN_DB["ㄝ"].svg },
+  "ㄧ|-|ㄢ|4": { word: "院",  detail: "學校操場", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#8B5CF6" text-anchor="middle">院</text>`) },
+  "ㄨ|-|-|1":  { word: "屋",  detail: "一間房屋", svg: wrapSvg(`<path d="M10 55 L50 18 L90 55Z" fill="#EF4444"/><rect x="25" y="55" width="50" height="35" fill="#FFF9C4"/><rect x="42" y="68" width="16" height="22" fill="#78350F"/>`) },
+  "ㄨ|-|ㄟ|2": { word: "為",  detail: "為什麼呀", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#F59E0B" text-anchor="middle">為</text>`) },
+  "ㄩ|-|-|3":  { word: "雨",  detail: "下雨天氣", svg: wrapSvg(`<path d="M15 38 Q50 18 85 38" stroke="#60A5FA" stroke-width="5" fill="#BFDBFE"/><rect x="15" y="35" width="70" height="12" rx="6" fill="#93C5FD"/><line x1="28" y1="52" x2="22" y2="72" stroke="#60A5FA" stroke-width="3" stroke-linecap="round"/><line x1="42" y1="52" x2="38" y2="76" stroke="#60A5FA" stroke-width="3" stroke-linecap="round"/><line x1="58" y1="52" x2="62" y2="76" stroke="#60A5FA" stroke-width="3" stroke-linecap="round"/><line x1="72" y1="52" x2="78" y2="72" stroke="#60A5FA" stroke-width="3" stroke-linecap="round"/>`) },
+  "ㄩ|-|ㄣ|4": { word: "運",  detail: "運動健康", svg: wrapSvg(`<text x="50" y="70" font-family="serif" font-size="52" font-weight="bold" fill="#10B981" text-anchor="middle">運</text>`) },
+
+  // 無聲母純韻母
+  "|-|ㄤ|2":   { word: "羊",  detail: "溫馴綿羊", svg: wrapSvg(`<circle cx="50" cy="50" r="22" fill="#F3F4F6" stroke="#D1D5DB" stroke-width="2"/><path d="M32 34 Q22 20 30 26 M68 34 Q78 20 70 26" stroke="#78350F" stroke-width="4" stroke-linecap="round" fill="none"/><circle cx="40" cy="46" r="4" fill="#1F2937"/><circle cx="60" cy="46" r="4" fill="#1F2937"/><ellipse cx="50" cy="56" rx="6" ry="4" fill="#FCA5A5"/><rect x="35" y="70" width="8" height="18" rx="4" fill="#D1D5DB"/><rect x="57" y="70" width="8" height="18" rx="4" fill="#D1D5DB"/>`) },
+  "|-|ㄢ|4":   { word: "岸",  detail: "河邊河岸", svg: wrapSvg(`<rect x="10" y="60" width="80" height="30" fill="#60A5FA"/><path d="M10 60 Q25 48 50 55 Q70 60 90 50 L90 60 Z" fill="#10B981"/>`) },
+  "|-|ㄦ|3":   { word: "耳",  detail: "耳朵聽音", svg: ZHUYIN_DB["ㄦ"].svg }
 };
 
 // 4. 全域狀態
@@ -620,27 +641,49 @@ function updateRobotDisplay() {
   const med  = robotState.medial  || "-";
   const fin  = robotState.final   || "-";
   const tone = robotState.tone    || "1";
+  const toneObj = TONES.find(t => t.symbol === tone);
+  const toneDisplayChar = toneObj ? toneObj.display : "";
 
+  // 更新 4 個顯示槽
   document.getElementById("robot-display-initial").innerText = robotState.initial || " ";
   document.getElementById("robot-display-medial").innerText  = robotState.medial  || " ";
   document.getElementById("robot-display-final").innerText   = robotState.final   || " ";
-  document.getElementById("robot-display-tone").innerText    = getToneDisplay(tone);
+  document.getElementById("robot-display-tone").innerText    = toneDisplayChar;
+
+  // 組合注音文字（用於螢幕顯示，聲調符號加在最後一個注音右上角）
+  const phonetic = (robotState.initial || "") + (robotState.medial || "") + (robotState.final || "");
+  const phoneticDisplay = phonetic ? (phonetic + (toneDisplayChar !== "一聲" ? toneDisplayChar : "")) : "";
 
   const combinationKey = `${init}|${med}|${fin}|${tone}`;
   const dictItem = SPELLING_DICT[combinationKey];
   const screen = document.getElementById("robot-screen");
 
   if (dictItem) {
+    // 有查到對應的中文字：顯示字、插圖和例詞
     screen.innerHTML = `
+      <div class="result-phonetic">${phoneticDisplay}</div>
       <div class="result-word">${dictItem.word}</div>
       <div class="result-svg">${dictItem.svg}</div>
       <div class="result-detail">${dictItem.detail}</div>
     `;
-  } else {
+    screen.classList.add("has-result");
+  } else if (phonetic) {
+    // 沒查到字典，但已有輸入：顯示注音組合文字 + 鼓勵發音
     screen.innerHTML = `
-      <div class="result-word">🤖</div>
-      <div class="result-detail">選好注音後，按「發音」按鈕吧！</div>
+      <div class="result-phonetic big-phonetic">${phoneticDisplay}</div>
+      <div class="result-hint">
+        <span class="hint-icon">🤖</span>
+        <span>按下方按鈕<br>聽聽怎麼唸！</span>
+      </div>
     `;
+    screen.classList.remove("has-result");
+  } else {
+    // 完全沒有選擇：顯示引導
+    screen.innerHTML = `
+      <div class="robot-idle-icon">🤖</div>
+      <div class="result-detail">從左邊選注音<br>機器人來拼音！</div>
+    `;
+    screen.classList.remove("has-result");
   }
 }
 
@@ -656,29 +699,77 @@ function startRobotSpelling() {
     return;
   }
 
-  const toneObj   = TONES.find(t => t.symbol === tone);
-  const toneName  = toneObj ? toneObj.audioText : "一聲";
-  const initK     = init || "-";
-  const medK      = med  || "-";
-  const finK      = fin  || "-";
-  const dictItem  = SPELLING_DICT[`${initK}|${medK}|${finK}|${tone}`];
+  const toneObj  = TONES.find(t => t.symbol === tone);
+  const toneName = toneObj ? toneObj.audioText : "一聲";
+  const initK    = init || "-";
+  const medK     = med  || "-";
+  const finK     = fin  || "-";
+  const dictItem = SPELLING_DICT[`${initK}|${medK}|${finK}|${tone}`];
+  const combined = (init || "") + (med || "") + (fin || "");
 
-  // 逐段唸：聲母 → 介音 → 韻母 → 結合發音
+  // 機器人眼睛閃爍動畫
+  const eyes = document.querySelectorAll(".eye");
+  eyes.forEach(e => e.style.background = "#F59E0B");
+  setTimeout(() => eyes.forEach(e => e.style.background = "#1F2937"), 600);
+
+  // 在螢幕上顯示「正在發音...」動畫
+  const screen = document.getElementById("robot-screen");
+  const toneDisplayChar = toneObj ? toneObj.display : "";
+  const phoneticDisplay = combined + (toneDisplayChar !== "一聲" ? toneDisplayChar : "");
+
+  // 逐段高亮顯示：聲母 → 介音 → 韻母 → 結合音
   const readSeq = [];
-  if (init) readSeq.push(init);
-  if (med)  readSeq.push(med);
-  if (fin)  readSeq.push(fin);
+  if (init) readSeq.push({ sound: init, label: `<span class="ph-init">${init}</span>` });
+  if (med)  readSeq.push({ sound: med,  label: `<span class="ph-med">${med}</span>` });
+  if (fin)  readSeq.push({ sound: fin,  label: `<span class="ph-fin">${fin}</span>` });
 
   let step = 0;
   function playNext() {
     if (step < readSeq.length) {
-      speak(readSeq[step], () => { step++; setTimeout(playNext, 250); });
+      // 高亮目前唸到哪個注音
+      const highlighted = readSeq.map((r, i) =>
+        i === step ? `<span class="ph-active">${r.sound}</span>` : `<span class="ph-dim">${r.sound}</span>`
+      ).join("");
+      screen.innerHTML = `
+        <div class="result-phonetic anim-speaking">${highlighted}</div>
+        <div class="result-detail">正在唸：${readSeq[step].sound}</div>
+      `;
+      speak(readSeq[step].sound, () => {
+        step++;
+        setTimeout(playNext, 300);
+      });
     } else {
-      const combined = init + med + fin;
-      const toneText = toneName;
+      // 全部唸完後：顯示合成音
       const finalWord = dictItem ? dictItem.word : combined;
-      speak(`${combined}，${toneText}，${finalWord}`, () => {
-        if (dictItem) setTimeout(() => speak(dictItem.detail), 400);
+      screen.innerHTML = `
+        <div class="result-phonetic result-phonetic-combined">${phoneticDisplay}</div>
+        <div class="result-detail">➡ ${finalWord} !</div>
+      `;
+      speak(finalWord, () => {
+        // 稍後顯示完整結果（若字典有對應圖片）
+        setTimeout(() => {
+          if (dictItem) {
+            screen.innerHTML = `
+              <div class="result-phonetic">${phoneticDisplay}</div>
+              <div class="result-word">${dictItem.word}</div>
+              <div class="result-svg">${dictItem.svg}</div>
+              <div class="result-detail">${dictItem.detail}</div>
+            `;
+            screen.classList.add("has-result");
+            speak(dictItem.detail);
+          } else {
+            screen.innerHTML = `
+              <div class="result-phonetic big-phonetic">${phoneticDisplay}</div>
+              <div class="result-hint">
+                <span class="hint-icon">🤖</span>
+                <span>拼出來了！<br>再試其他組合吧！</span>
+              </div>
+            `;
+          }
+          // 機器人眼睛變綠 (成功) 
+          eyes.forEach(e => e.style.background = "#10B981");
+          setTimeout(() => eyes.forEach(e => e.style.background = "#1F2937"), 1200);
+        }, 600);
       });
     }
   }

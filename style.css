@@ -442,6 +442,92 @@ nav {
   color: #4B5563;
 }
 
+/* 注音文字組合顯示（機器人螢幕頂端小標） */
+.result-phonetic {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #6B7280;
+  letter-spacing: 2px;
+  margin-bottom: 4px;
+}
+
+/* 大尺寸注音組合（字典未命中但已有輸入時顯示） */
+.result-phonetic.big-phonetic {
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: #F59E0B;
+  text-shadow: 2px 2px 0 #FDE68A;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+/* 發音完成後的大字組合 */
+.result-phonetic.result-phonetic-combined {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #10B981;
+  letter-spacing: 4px;
+  animation: popIn 0.4s ease;
+}
+
+/* 發音進行中動畫 */
+.result-phonetic.anim-speaking {
+  font-size: 2rem;
+  letter-spacing: 8px;
+}
+
+/* 逐段高亮：正在唸的符號 */
+.ph-active {
+  color: #EF4444;
+  font-size: 1.4em;
+  display: inline-block;
+  animation: bounce 0.5s ease infinite;
+}
+
+/* 逐段高亮：已唸完/待唸 */
+.ph-dim {
+  color: #D1D5DB;
+  font-size: 1em;
+}
+
+.ph-init  { color: var(--color-initial-text); }
+.ph-med   { color: var(--color-medial-text); }
+.ph-fin   { color: var(--color-final-text); }
+
+/* 有查到字典結果：螢幕縮小 result-word 留空間給注音 */
+.robot-screen.has-result .result-word {
+  font-size: 2.8rem;
+}
+.robot-screen.has-result .result-svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* 「按下方按鈕」提示卡片 */
+.result-hint {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #F3F4F6;
+  border-radius: 16px;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #4B5563;
+}
+
+.hint-icon {
+  font-size: 2.2rem;
+}
+
+/* 閒置機器人圖示 */
+.robot-idle-icon {
+  font-size: 3.5rem;
+  margin-bottom: 8px;
+  animation: bounce 2s ease infinite;
+}
+
+
 /* 機器人注音顯示欄位 */
 .robot-spelling-display {
   display: flex;
