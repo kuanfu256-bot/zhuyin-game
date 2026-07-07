@@ -11,19 +11,19 @@ function wrapSvg(inner) {
 // pinyin 欄位用於卡片背面顯示，rhyme 欄位用於兒歌口訣朗讀
 const ZHUYIN_DB = {
   // --- 聲母 (21個) ---
-  "ㄅ": { category: "initial", word: "包子", pinyin: "ㄅㄠ˙ㄗ", rhyme: "ㄅ ㄅ ㄅ，包子香香，爸爸買包子。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄅ": { category: "initial", word: "包子", words: ["包子","爸爸","飽飽","蝙蝠"], pinyin: "ㄅㄠ˙ㄗ", rhyme: "ㄅ ㄅ ㄅ，包子香香，爸爸買包子。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<circle cx="50" cy="42" r="28" fill="#FDA4AF"/>
       <path d="M35 30 Q50 20 65 30 Q65 52 50 58 Q35 52 35 30Z" fill="#FFF" opacity="0.5"/>
       <circle cx="42" cy="40" r="3" fill="#BE123C"/>
       <circle cx="58" cy="40" r="3" fill="#BE123C"/>
       <path d="M44 50 Q50 55 56 50" stroke="#BE123C" stroke-width="2" fill="none" stroke-linecap="round"/>`) },
 
-  "ㄆ": { category: "initial", word: "蘋果", pinyin: "ㄆㄧㄥˊ ㄍㄨㄛˇ", rhyme: "ㄆ ㄆ ㄆ，蘋果紅紅，婆婆洗蘋果。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄆ": { category: "initial", word: "蘋果", words: ["蘋果","跑步","朋友","葡萄"], pinyin: "ㄆㄧㄥˊ ㄍㄨㄛˇ", rhyme: "ㄆ ㄆ ㄆ，蘋果紅紅，婆婆洗蘋果。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<circle cx="50" cy="55" r="32" fill="#EF4444"/>
       <path d="M50 23 Q55 13 48 13 Q42 13 50 23" stroke="#10B981" stroke-width="3" fill="#10B981" stroke-linecap="round"/>
       <path d="M38 40 Q42 35 46 40" stroke="#FECACA" stroke-width="2.5" fill="none"/>`) },
 
-  "ㄇ": { category: "initial", word: "貓咪", pinyin: "ㄇㄠ ㄇㄧ", rhyme: "ㄇ ㄇ ㄇ，貓咪喵喵，小貓抓蝴蝶。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄇ": { category: "initial", word: "貓咪", words: ["貓咪","媽媽","蘑菇","帽子"], pinyin: "ㄇㄠ ㄇㄧ", rhyme: "ㄇ ㄇ ㄇ，貓咪喵喵，小貓抓蝴蝶。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<ellipse cx="50" cy="60" rx="28" ry="25" fill="#F59E0B"/>
       <polygon points="25,38 32,55 18,55" fill="#D97706"/>
       <polygon points="75,38 82,55 68,55" fill="#D97706"/>
@@ -33,14 +33,14 @@ const ZHUYIN_DB = {
       <ellipse cx="50" cy="58" rx="5" ry="3" fill="#F87171"/>
       <path d="M42 62 Q50 67 58 62" stroke="#1F2937" stroke-width="1.5" fill="none"/>`) },
 
-  "ㄈ": { category: "initial", word: "飛機", pinyin: "ㄈㄟ ㄐㄧ", rhyme: "ㄈ ㄈ ㄈ，飛機高高，飛到白雲端。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄈ": { category: "initial", word: "飛機", words: ["飛機","飯糰","番茄","風箏"], pinyin: "ㄈㄟ ㄐㄧ", rhyme: "ㄈ ㄈ ㄈ，飛機高高，飛到白雲端。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<rect x="15" y="44" width="70" height="12" rx="6" fill="#3B82F6"/>
       <path d="M42 44 L50 20 L58 44Z" fill="#60A5FA"/>
       <path d="M28 56 L35 70 L42 56Z" fill="#60A5FA"/>
       <path d="M58 56 L65 70 L72 56Z" fill="#93C5FD"/>
       <circle cx="72" cy="50" r="4" fill="#FFF" opacity="0.7"/>`) },
 
-  "ㄉ": { category: "initial", word: "大象", pinyin: "ㄉㄚˋ ㄒㄧㄤˋ", rhyme: "ㄉ ㄉ ㄉ，大象大鼻，大步往前走。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄉ": { category: "initial", word: "大象", words: ["大象","弟弟","燈籠","冬瓜"], pinyin: "ㄉㄚˋ ㄒㄧㄤˋ", rhyme: "ㄉ ㄉ ㄉ，大象大鼻，大步往前走。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<ellipse cx="52" cy="55" rx="30" ry="25" fill="#9CA3AF"/>
       <circle cx="72" cy="38" r="14" fill="#9CA3AF"/>
       <path d="M65 48 Q58 70 50 80" stroke="#9CA3AF" stroke-width="10" stroke-linecap="round" fill="none"/>
@@ -52,7 +52,7 @@ const ZHUYIN_DB = {
       <rect x="54" y="72" width="8" height="18" rx="4" fill="#6B7280"/>
       <rect x="66" y="72" width="8" height="18" rx="4" fill="#6B7280"/>`) },
 
-  "ㄊ": { category: "initial", word: "兔子", pinyin: "ㄊㄨˋ ˙ㄗ", rhyme: "ㄊ ㄊ ㄊ，兔子跳跳，愛吃紅蘿蔔。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄊ": { category: "initial", word: "兔子", words: ["兔子","太陽","糖果","田地"], pinyin: "ㄊㄨˋ ˙ㄗ", rhyme: "ㄊ ㄊ ㄊ，兔子跳跳，愛吃紅蘿蔔。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<ellipse cx="50" cy="62" rx="24" ry="22" fill="#E5E7EB"/>
       <rect x="34" y="12" width="10" height="32" rx="5" fill="#E5E7EB"/>
       <rect x="56" y="12" width="10" height="32" rx="5" fill="#E5E7EB"/>
@@ -62,7 +62,7 @@ const ZHUYIN_DB = {
       <circle cx="57" cy="57" r="4" fill="#EF4444"/>
       <ellipse cx="50" cy="65" rx="5" ry="4" fill="#FCA5A5"/>`) },
 
-  "ㄋ": { category: "initial", word: "牛奶", pinyin: "ㄋㄧㄡˊ ㄋㄞˇ", rhyme: "ㄋ ㄋ ㄋ，牛奶白白，每天喝一杯。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄋ": { category: "initial", word: "牛奶", words: ["牛奶","鳥巢","泥巴","奶奶"], pinyin: "ㄋㄧㄡˊ ㄋㄞˇ", rhyme: "ㄋ ㄋ ㄋ，牛奶白白，每天喝一杯。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<rect x="30" y="22" width="40" height="58" rx="8" fill="#FFF" stroke="#D1D5DB" stroke-width="3"/>
       <rect x="30" y="30" width="40" height="22" fill="#BFDBFE" rx="2"/>
       <text x="50" y="47" font-size="14" fill="#1D4ED8" text-anchor="middle" font-weight="bold">牛奶</text>
@@ -70,7 +70,7 @@ const ZHUYIN_DB = {
       <circle cx="44" cy="65" r="3" fill="#D1D5DB"/>
       <circle cx="56" cy="65" r="3" fill="#D1D5DB"/>`) },
 
-  "ㄌ": { category: "initial", word: "老虎", pinyin: "ㄌㄠˇ ㄏㄨˇ", rhyme: "ㄌ ㄌ ㄌ，老虎威威，山林的大王。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄌ": { category: "initial", word: "老虎", words: ["老虎","蘿蔔","龍蝦","路燈"], pinyin: "ㄌㄠˇ ㄏㄨˇ", rhyme: "ㄌ ㄌ ㄌ，老虎威威，山林的大王。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<ellipse cx="50" cy="55" rx="30" ry="28" fill="#F59E0B"/>
       <circle cx="50" cy="45" r="22" fill="#FCD34D"/>
       <circle cx="40" cy="38" r="5" fill="#F59E0B"/>
@@ -81,7 +81,7 @@ const ZHUYIN_DB = {
       <path d="M38 56 Q50 63 62 56" stroke="#1F2937" stroke-width="1.5" fill="none"/>
       <path d="M30 35 L25 28 M35 32 L33 24" stroke="#F59E0B" stroke-width="3" stroke-linecap="round"/>`) },
 
-  "ㄍ": { category: "initial", word: "西瓜", pinyin: "ㄒㄧ ㄍㄨㄚ", rhyme: "ㄍ ㄍ ㄍ，西瓜圓圓，夏天最消暑。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄍ": { category: "initial", word: "西瓜", words: ["西瓜","哥哥","糕點","公雞"], pinyin: "ㄒㄧ ㄍㄨㄚ", rhyme: "ㄍ ㄍ ㄍ，西瓜圓圓，夏天最消暑。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<path d="M15 50 Q15 15 50 15 Q85 15 85 50 Z" fill="#10B981"/>
       <path d="M18 50 Q18 18 50 18 Q82 18 82 50 Z" fill="#34D399"/>
       <path d="M22 50 Q22 22 50 22 Q78 22 78 50 Z" fill="#EF4444"/>
@@ -90,13 +90,13 @@ const ZHUYIN_DB = {
       <circle cx="64" cy="36" r="2.5" fill="#1F2937"/>
       <path d="M50 15 Q55 5 52 2" stroke="#10B981" stroke-width="3" stroke-linecap="round" fill="none"/>`) },
 
-  "ㄎ": { category: "initial", word: "蝌蚪", pinyin: "ㄎㄜˊ ㄉㄡˇ", rhyme: "ㄎ ㄎ ㄎ，蝌蚪游游，長大變青蛙。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄎ": { category: "initial", word: "蝌蚪", words: ["蝌蚪","蝴蝶","孔雀","口袋"], pinyin: "ㄎㄜˊ ㄉㄡˇ", rhyme: "ㄎ ㄎ ㄎ，蝌蚪游游，長大變青蛙。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<circle cx="45" cy="45" r="22" fill="#1F2937"/>
       <circle cx="40" cy="38" r="4" fill="#374151"/>
       <circle cx="42" cy="37" r="2" fill="#FFF"/>
       <path d="M64 50 Q82 45 85 60 Q82 72 70 68" stroke="#374151" stroke-width="8" stroke-linecap="round" fill="none"/>`) },
 
-  "ㄏ": { category: "initial", word: "花朵", pinyin: "ㄏㄨㄚ ㄉㄨㄛˇ", rhyme: "ㄏ ㄏ ㄏ，花朵香香，蝴蝶愛採蜜。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄏ": { category: "initial", word: "花朵", words: ["河馬","花朵","狐狸","荷花"], pinyin: "ㄏㄨㄚ ㄉㄨㄛˇ", rhyme: "ㄏ ㄏ ㄏ，花朵香香，蝴蝶愛採蜜。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<circle cx="50" cy="50" r="10" fill="#FBBF24"/>
       <ellipse cx="50" cy="28" rx="10" ry="14" fill="#F87171"/>
       <ellipse cx="50" cy="72" rx="10" ry="14" fill="#F87171"/>
@@ -107,23 +107,23 @@ const ZHUYIN_DB = {
       <ellipse cx="33" cy="67" rx="10" ry="14" fill="#FB923C" transform="rotate(45 33 67)"/>
       <ellipse cx="67" cy="67" rx="10" ry="14" fill="#FB923C" transform="rotate(-45 67 67)"/>`) },
 
-  "ㄐ": { category: "initial", word: "雞蛋", pinyin: "ㄐㄧ ㄉㄢˋ", rhyme: "ㄐ ㄐ ㄐ，雞蛋圓圓，雞媽媽生蛋。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄐ": { category: "initial", word: "雞蛋", words: ["雞蛋","橘子","金魚","積木"], pinyin: "ㄐㄧ ㄉㄢˋ", rhyme: "ㄐ ㄐ ㄐ，雞蛋圓圓，雞媽媽生蛋。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<ellipse cx="50" cy="55" rx="35" ry="28" fill="#FFF" stroke="#D1D5DB" stroke-width="3"/>
       <ellipse cx="50" cy="58" rx="20" ry="18" fill="#FBBF24"/>
       <circle cx="44" cy="52" r="2" fill="#FFF" opacity="0.6"/>`) },
 
-  "ㄑ": { category: "initial", word: "氣球", pinyin: "ㄑㄧˋ ㄑㄧㄡˊ", rhyme: "ㄑ ㄑ ㄑ，氣球飛高，牽在手裡玩。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄑ": { category: "initial", word: "氣球", words: ["球球","青蛙","鉛筆","氣球"], pinyin: "ㄑㄧˋ ㄑㄧㄡˊ", rhyme: "ㄑ ㄑ ㄑ，氣球飛高，牽在手裡玩。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<ellipse cx="50" cy="42" rx="28" ry="33" fill="#EC4899"/>
       <ellipse cx="42" cy="30" rx="8" ry="12" fill="#F9A8D4" opacity="0.5"/>
       <path d="M46 75 L54 75 L52 80 L48 80Z" fill="#D946EF"/>
       <path d="M50 80 Q44 88 50 95" stroke="#9CA3AF" stroke-width="2" fill="none"/>`) },
 
-  "ㄒ": { category: "initial", word: "香蕉", pinyin: "ㄒㄧㄤ ㄐㄧㄠ", rhyme: "ㄒ ㄒ ㄒ，香蕉彎彎，像一條小船。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄒ": { category: "initial", word: "香蕉", words: ["西瓜","熊貓","小鳥","蝦子"], pinyin: "ㄒㄧㄤ ㄐㄧㄠ", rhyme: "ㄒ ㄒ ㄒ，香蕉彎彎，像一條小船。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<path d="M25 70 Q30 35 70 25 Q75 40 60 55 Q45 65 25 70Z" fill="#FBBF24"/>
       <path d="M70 25 L75 20" stroke="#78350F" stroke-width="4" stroke-linecap="round"/>
       <path d="M35 60 Q50 45 65 32" stroke="#FDE68A" stroke-width="2" fill="none"/>`) },
 
-  "ㄓ": { category: "initial", word: "蜘蛛", pinyin: "ㄓ ㄓㄨ", rhyme: "ㄓ ㄓ ㄓ，蜘蛛織網，蜘蛛爬呀爬。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄓ": { category: "initial", word: "蜘蛛", words: ["蜘蛛","竹子","猴子","蟑螂"], pinyin: "ㄓ ㄓㄨ", rhyme: "ㄓ ㄓ ㄓ，蜘蛛織網，蜘蛛爬呀爬。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<circle cx="50" cy="50" r="16" fill="#1F2937"/>
       <circle cx="44" cy="46" r="3" fill="#EF4444"/>
       <circle cx="56" cy="46" r="3" fill="#EF4444"/>
@@ -134,7 +134,7 @@ const ZHUYIN_DB = {
       <line x1="66" y1="52" x2="88" y2="55" stroke="#374151" stroke-width="3"/>
       <line x1="66" y1="55" x2="85" y2="68" stroke="#374151" stroke-width="3"/>`) },
 
-  "ㄔ": { category: "initial", word: "吃東西", pinyin: "ㄔ ㄉㄨㄥ ˙ㄒㄧ", rhyme: "ㄔ ㄔ ㄔ，吃東西時，細嚼慢慢嚥。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄔ": { category: "initial", word: "吃東西", words: ["蟲子","車子","吃飯","翅膀"], pinyin: "ㄔ ㄉㄨㄥ ˙ㄒㄧ", rhyme: "ㄔ ㄔ ㄔ，吃東西時，細嚼慢慢嚥。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<rect x="25" y="42" width="50" height="22" rx="5" fill="#EF4444"/>
       <path d="M33 42 L40 28 H60 L67 42Z" fill="#93C5FD"/>
       <circle cx="37" cy="66" r="9" fill="#1F2937"/>
@@ -142,7 +142,7 @@ const ZHUYIN_DB = {
       <circle cx="37" cy="66" r="4" fill="#9CA3AF"/>
       <circle cx="63" cy="66" r="4" fill="#9CA3AF"/>`) },
 
-  "ㄕ": { category: "initial", word: "獅子", pinyin: "ㄕ ˙ㄗ", rhyme: "ㄕ ㄕ ㄕ，獅子大吼，森林的大王。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄕ": { category: "initial", word: "獅子", words: ["獅子","樹木","手套","蛇蛇"], pinyin: "ㄕ ˙ㄗ", rhyme: "ㄕ ㄕ ㄕ，獅子大吼，森林的大王。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<circle cx="50" cy="50" r="30" fill="#F59E0B"/>
       <circle cx="50" cy="50" r="20" fill="#FCD34D"/>
       <circle cx="42" cy="45" r="4" fill="#1F2937"/>
@@ -155,7 +155,7 @@ const ZHUYIN_DB = {
       <path d="M78 22 L68 36" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>
       <path d="M50 20 L50 30" stroke="#F59E0B" stroke-width="7" stroke-linecap="round"/>`) },
 
-  "ㄖ": { category: "initial", word: "太陽", pinyin: "ㄊㄞˋ ㄧㄤˊ", rhyme: "ㄖ ㄖ ㄖ，日出東方，溫暖照大地。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄖ": { category: "initial", word: "太陽", words: ["日曆","燃燒","榕樹","熱狗"], pinyin: "ㄊㄞˋ ㄧㄤˊ", rhyme: "ㄖ ㄖ ㄖ，日出東方，溫暖照大地。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<circle cx="50" cy="50" r="22" fill="#FBBF24"/>
       <line x1="50" y1="12" x2="50" y2="22" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/>
       <line x1="50" y1="78" x2="50" y2="88" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/>
@@ -166,11 +166,11 @@ const ZHUYIN_DB = {
       <line x1="24" y1="76" x2="31" y2="69" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/>
       <line x1="76" y1="76" x2="69" y2="69" stroke="#FBBF24" stroke-width="5" stroke-linecap="round"/>`) },
 
-  "ㄗ": { category: "initial", word: "字", pinyin: "ˋㄗ", rhyme: "ㄗ ㄗ ㄗ，認識文字，好棒的孩子。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄗ": { category: "initial", word: "字", words: ["蚱蜢","字典","棕熊","粽子"], pinyin: "ˋㄗ", rhyme: "ㄗ ㄗ ㄗ，認識文字，好棒的孩子。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<rect x="20" y="20" width="60" height="60" rx="5" fill="#EFF6FF" stroke="#3B82F6" stroke-width="3"/>
       <text x="50" y="67" font-family="serif" font-size="38" font-weight="bold" fill="#1D4ED8" text-anchor="middle">字</text>`) },
 
-  "ㄘ": { category: "initial", word: "草地", pinyin: "ㄘㄠˇ ㄉㄧˋ", rhyme: "ㄘ ㄘ ㄘ，草地綠綠，小狗跑又跳。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄘ": { category: "initial", word: "草地", words: ["草莓","蠶寶","彩虹","刺蝟"], pinyin: "ㄘㄠˇ ㄉㄧˋ", rhyme: "ㄘ ㄘ ㄘ，草地綠綠，小狗跑又跳。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<rect x="5" y="65" width="90" height="30" fill="#10B981" rx="5"/>
       <path d="M22 65 L18 45 L26 65Z" fill="#10B981"/>
       <path d="M30 65 L30 40 L34 65Z" fill="#059669"/>
@@ -179,17 +179,17 @@ const ZHUYIN_DB = {
       <path d="M70 65 L67 50 L74 65Z" fill="#10B981"/>
       <path d="M80 65 L80 45 L85 65Z" fill="#059669"/>`) },
 
-  "ㄙ": { category: "initial", word: "三角形", pinyin: "ㄙㄢ ㄐㄧㄠˇ ㄒㄧㄥˊ", rhyme: "ㄙ ㄙ ㄙ，三隻小豬，蓋了三間房。", color: "#FFE4E6", textColor: "#BE123C",
+  "ㄙ": { category: "initial", word: "三角形", words: ["松鼠","沙灘","顏色","蘋果"], pinyin: "ㄙㄢ ㄐㄧㄠˇ ㄒㄧㄥˊ", rhyme: "ㄙ ㄙ ㄙ，三隻小豬，蓋了三間房。", color: "#FFE4E6", textColor: "#BE123C",
     svg: wrapSvg(`<polygon points="50,12 88,82 12,82" fill="#F472B6" stroke="#DB2777" stroke-width="3"/>
       <text x="50" y="75" font-size="20" fill="#FFF" text-anchor="middle" font-weight="bold">三</text>`) },
 
   // --- 介音 (3個) ---
-  "ㄧ": { category: "medial", word: "衣服", pinyin: "ㄧ ㄈㄨˊ", rhyme: "ㄧ ㄧ ㄧ，穿上衣服，保暖不感冒。", color: "#ECFDF5", textColor: "#047857",
+  "ㄧ": { category: "medial", word: "衣服", words: ["一二三","衣服","椅子","蜜蜂"], pinyin: "ㄧ ㄈㄨˊ", rhyme: "ㄧ ㄧ ㄧ，穿上衣服，保暖不感冒。", color: "#ECFDF5", textColor: "#047857",
     svg: wrapSvg(`<path d="M30 28 L50 38 L70 28 L82 43 L70 48 L70 82 L30 82 L30 48 L18 43Z" fill="#10B981"/>
       <circle cx="50" cy="56" r="4" fill="#FFF"/>
       <circle cx="50" cy="70" r="4" fill="#FFF"/>`) },
 
-  "ㄨ": { category: "medial", word: "烏龜", pinyin: "ㄨ ㄍㄨㄟ", rhyme: "ㄨ ㄨ ㄨ，烏龜爬爬，慢慢走向前。", color: "#ECFDF5", textColor: "#047857",
+  "ㄨ": { category: "medial", word: "烏龜", words: ["烏龜","屋頂","五官","蜘蛛"], pinyin: "ㄨ ㄍㄨㄟ", rhyme: "ㄨ ㄨ ㄨ，烏龜爬爬，慢慢走向前。", color: "#ECFDF5", textColor: "#047857",
     svg: wrapSvg(`<ellipse cx="50" cy="55" rx="30" ry="24" fill="#10B981"/>
       <circle cx="50" cy="55" r="22" fill="#059669"/>
       <path d="M38 40 Q50 34 62 40 Q68 48 62 55 Q50 60 38 55 Q32 48 38 40Z" fill="#34D399"/>
@@ -198,7 +198,7 @@ const ZHUYIN_DB = {
       <rect x="32" y="72" width="10" height="16" rx="5" fill="#059669"/>
       <rect x="58" y="72" width="10" height="16" rx="5" fill="#059669"/>`) },
 
-  "ㄩ": { category: "medial", word: "小魚", pinyin: "ㄒㄧㄠˇ ㄩˊ", rhyme: "ㄩ ㄩ ㄩ，小魚游游，水中吹泡泡。", color: "#ECFDF5", textColor: "#047857",
+  "ㄩ": { category: "medial", word: "小魚", words: ["魚魚","月亮","羽毛","玉米"], pinyin: "ㄒㄧㄠˇ ㄩˊ", rhyme: "ㄩ ㄩ ㄩ，小魚游游，水中吹泡泡。", color: "#ECFDF5", textColor: "#047857",
     svg: wrapSvg(`<path d="M18 50 Q50 28 78 50 Q50 72 18 50Z" fill="#60A5FA"/>
       <path d="M78 50 L95 33 L90 50 L95 67Z" fill="#3B82F6"/>
       <circle cx="32" cy="45" r="4" fill="#FFF"/>
@@ -207,7 +207,7 @@ const ZHUYIN_DB = {
       <circle cx="52" cy="18" r="7" fill="none" stroke="#BAE6FD" stroke-width="2"/>`) },
 
   // --- 韻母 (13個) ---
-  "ㄚ": { category: "final", word: "鴨子", pinyin: "ㄧㄚ ˙ㄗ", rhyme: "ㄚ ㄚ ㄚ，鴨子呱呱，游水抓小魚。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄚ": { category: "final", word: "鴨子", words: ["阿婆","牙齒","啊啊","鴨子"], pinyin: "ㄧㄚ ˙ㄗ", rhyme: "ㄚ ㄚ ㄚ，鴨子呱呱，游水抓小魚。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<ellipse cx="48" cy="60" rx="28" ry="22" fill="#FBBF24"/>
       <circle cx="70" cy="48" r="16" fill="#FCD34D"/>
       <ellipse cx="82" cy="50" rx="10" ry="6" fill="#F97316" transform="rotate(-15 82 50)"/>
@@ -215,7 +215,7 @@ const ZHUYIN_DB = {
       <ellipse cx="42" cy="78" rx="12" ry="6" fill="#F97316"/>
       <ellipse cx="62" cy="78" rx="12" ry="6" fill="#F97316"/>`) },
 
-  "ㄛ": { category: "final", word: "公雞", pinyin: "ㄍㄨㄥ ㄐㄧ", rhyme: "ㄛ ㄛ ㄛ，公雞喔喔，叫醒早起人。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄛ": { category: "final", word: "公雞", words: ["喔喔","蘑菇","蝌蚪","哦哦"], pinyin: "ㄍㄨㄥ ㄐㄧ", rhyme: "ㄛ ㄛ ㄛ，公雞喔喔，叫醒早起人。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<ellipse cx="45" cy="62" rx="24" ry="22" fill="#EF4444"/>
       <circle cx="66" cy="42" r="15" fill="#F87171"/>
       <ellipse cx="80" cy="44" rx="10" ry="6" fill="#F97316" transform="rotate(-10 80 44)"/>
@@ -225,25 +225,25 @@ const ZHUYIN_DB = {
       <path d="M38 82 Q35 92 50 90 Q45 82 38 82Z" fill="#F97316"/>
       <path d="M52 82 Q50 92 64 90 Q60 82 52 82Z" fill="#F97316"/>`) },
 
-  "ㄜ": { category: "final", word: "天鵝", pinyin: "ㄊㄧㄢ ㄜˊ", rhyme: "ㄜ ㄜ ㄜ，天鵝游游，脖子彎又長。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄜ": { category: "final", word: "天鵝", words: ["鱷魚","惡魔","餓餓","鵝鵝"], pinyin: "ㄊㄧㄢ ㄜˊ", rhyme: "ㄜ ㄜ ㄜ，天鵝游游，脖子彎又長。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<ellipse cx="45" cy="72" rx="30" ry="18" fill="#F3F4F6"/>
       <path d="M45 70 Q50 55 60 40 Q70 28 78 32 Q82 38 76 44 Q68 48 62 58 L58 70Z" fill="#FFF" stroke="#E5E7EB" stroke-width="2"/>
       <circle cx="80" cy="34" r="8" fill="#FFF" stroke="#E5E7EB" stroke-width="2"/>
       <ellipse cx="88" cy="34" rx="8" ry="5" fill="#F97316" transform="rotate(-10 88 34)"/>
       <circle cx="84" cy="30" r="2" fill="#1F2937"/>`) },
 
-  "ㄝ": { category: "final", word: "樹葉", pinyin: "ㄕㄨˋ ㄧㄝˋ", rhyme: "ㄝ ㄝ ㄝ，樹葉綠綠，大樹的衣服。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄝ": { category: "final", word: "樹葉", words: ["耶誕","爺爺","爸爺","椰子"], pinyin: "ㄕㄨˋ ㄧㄝˋ", rhyme: "ㄝ ㄝ ㄝ，樹葉綠綠，大樹的衣服。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<path d="M50 8 Q20 40 50 92 Q80 40 50 8Z" fill="#10B981"/>
       <line x1="50" y1="8" x2="50" y2="92" stroke="#047857" stroke-width="3"/>
       <path d="M50 30 Q38 36 30 30" stroke="#047857" stroke-width="2" fill="none"/>
       <path d="M50 50 Q62 56 70 50" stroke="#047857" stroke-width="2" fill="none"/>
       <path d="M50 70 Q38 76 32 70" stroke="#047857" stroke-width="2" fill="none"/>`) },
 
-  "ㄞ": { category: "final", word: "愛心", pinyin: "ㄞˋ ㄒㄧㄣ", rhyme: "ㄞ ㄞ ㄞ，媽媽愛心，溫暖照我心。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄞ": { category: "final", word: "愛心", words: ["愛心","螞蟻","癩蛤","哎哎"], pinyin: "ㄞˋ ㄒㄧㄣ", rhyme: "ㄞ ㄞ ㄞ，媽媽愛心，溫暖照我心。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<path d="M50 80 Q10 52 10 30 Q10 10 30 10 Q42 10 50 22 Q58 10 70 10 Q90 10 90 30 Q90 52 50 80Z" fill="#EC4899"/>
       <path d="M28 28 Q30 20 38 22" stroke="#F9A8D4" stroke-width="3" fill="none" stroke-linecap="round"/>`) },
 
-  "ㄟ": { category: "final", word: "直升機", pinyin: "ㄓˊ ㄕㄥ ㄐㄧ", rhyme: "ㄟ ㄟ ㄟ，直升機飛，飛向大晴天。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄟ": { category: "final", word: "直升機", words: ["杯子","黑熊","北極","飛飛"], pinyin: "ㄓˊ ㄕㄥ ㄐㄧ", rhyme: "ㄟ ㄟ ㄟ，直升機飛，飛向大晴天。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<rect x="28" y="46" width="48" height="18" rx="9" fill="#EF4444"/>
       <circle cx="60" cy="55" r="8" fill="#FFF" opacity="0.4"/>
       <line x1="52" y1="46" x2="52" y2="28" stroke="#374151" stroke-width="4"/>
@@ -253,13 +253,13 @@ const ZHUYIN_DB = {
       <line x1="26" y1="78" x2="34" y2="78" stroke="#374151" stroke-width="3"/>
       <line x1="66" y1="78" x2="78" y2="78" stroke="#374151" stroke-width="3"/>`) },
 
-  "ㄠ": { category: "final", word: "書包", pinyin: "ㄕㄨ ㄅㄠ", rhyme: "ㄠ ㄠ ㄠ，揹起書包，快樂上學去。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄠ": { category: "final", word: "書包", words: ["貓貓","老鼠","草地","飽飽"], pinyin: "ㄕㄨ ㄅㄠ", rhyme: "ㄠ ㄠ ㄠ，揹起書包，快樂上學去。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<rect x="22" y="32" width="56" height="52" rx="10" fill="#3B82F6"/>
       <rect x="32" y="48" width="36" height="26" rx="6" fill="#1D4ED8"/>
       <path d="M36 32 L36 22 Q50 14 64 22 L64 32" stroke="#1D4ED8" stroke-width="5" fill="none" stroke-linecap="round"/>
       <rect x="44" y="58" width="12" height="8" rx="3" fill="#3B82F6"/>`) },
 
-  "ㄡ": { category: "final", word: "猴子", pinyin: "ㄏㄡˊ ˙ㄗ", rhyme: "ㄡ ㄡ ㄡ，猴子跳跳，爬樹好厲害。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄡ": { category: "final", word: "猴子", words: ["藕節","狗狗","牛牛","猴子"], pinyin: "ㄏㄡˊ ˙ㄗ", rhyme: "ㄡ ㄡ ㄡ，猴子跳跳，爬樹好厲害。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<circle cx="50" cy="48" r="26" fill="#D97706"/>
       <circle cx="50" cy="55" r="18" fill="#FCD34D"/>
       <circle cx="36" cy="36" r="10" fill="#D97706"/>
@@ -271,20 +271,20 @@ const ZHUYIN_DB = {
       <ellipse cx="50" cy="56" rx="7" ry="5" fill="#EF4444"/>
       <path d="M44 62 Q50 67 56 62" stroke="#1F2937" stroke-width="1.5" fill="none"/>`) },
 
-  "ㄢ": { category: "final", word: "安全帽", pinyin: "ㄢ ㄑㄩㄢˊ ㄇㄠˋ", rhyme: "ㄢ ㄢ ㄢ，安全帽子，騎車要戴好。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄢ": { category: "final", word: "安全帽", words: ["安全","暗淡","按鈕","雁鳥"], pinyin: "ㄢ ㄑㄩㄢˊ ㄇㄠˋ", rhyme: "ㄢ ㄢ ㄢ，安全帽子，騎車要戴好。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<path d="M15 58 Q15 20 50 20 Q85 20 85 58Z" fill="#FBBF24"/>
       <rect x="22" y="58" width="56" height="8" rx="4" fill="#1F2937"/>
       <path d="M30 62 Q50 78 70 62" stroke="#1F2937" stroke-width="2.5" fill="none"/>
       <rect x="46" y="20" width="8" height="12" rx="4" fill="#FCD34D"/>`) },
 
-  "ㄣ": { category: "final", word: "門", pinyin: "ㄇㄣˊ", rhyme: "ㄣ ㄣ ㄣ，推開大門，禮貌說你好。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄣ": { category: "final", word: "門", words: ["恩人","銀行","引擎","燕子"], pinyin: "ㄇㄣˊ", rhyme: "ㄣ ㄣ ㄣ，推開大門，禮貌說你好。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<rect x="18" y="15" width="64" height="75" fill="#78350F" rx="3"/>
       <rect x="22" y="18" width="26" height="69" fill="#B45309" rx="2"/>
       <rect x="52" y="18" width="26" height="69" fill="#B45309" rx="2"/>
       <circle cx="46" cy="55" r="4" fill="#FBBF24"/>
       <circle cx="54" cy="55" r="4" fill="#FBBF24"/>`) },
 
-  "ㄤ": { category: "final", word: "螃蟹", pinyin: "ㄆㄤˊ ㄒㄧㄝˋ", rhyme: "ㄤ ㄤ ㄤ，螃蟹橫走，大螯夾夾夾。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄤ": { category: "final", word: "螃蟹", words: ["昂首","胖胖","航行","糖果"], pinyin: "ㄆㄤˊ ㄒㄧㄝˋ", rhyme: "ㄤ ㄤ ㄤ，螃蟹橫走，大螯夾夾夾。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<rect x="30" y="38" width="40" height="28" rx="8" fill="#EF4444"/>
       <circle cx="43" cy="50" r="5" fill="#FCA5A5"/>
       <circle cx="57" cy="50" r="5" fill="#FCA5A5"/>
@@ -295,7 +295,7 @@ const ZHUYIN_DB = {
       <line x1="55" y1="66" x2="58" y2="82" stroke="#EF4444" stroke-width="5" stroke-linecap="round"/>
       <line x1="65" y1="66" x2="72" y2="80" stroke="#EF4444" stroke-width="5" stroke-linecap="round"/>`) },
 
-  "ㄥ": { category: "final", word: "蜜蜂", pinyin: "ㄇㄧˋ ㄈㄥ", rhyme: "ㄥ ㄥ ㄥ，蜜蜂嗡嗡，花間採花蜜。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄥ": { category: "final", word: "蜜蜂", words: ["嗯嗯","鷹隼","橙子","冰塊"], pinyin: "ㄇㄧˋ ㄈㄥ", rhyme: "ㄥ ㄥ ㄥ，蜜蜂嗡嗡，花間採花蜜。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<ellipse cx="50" cy="58" rx="22" ry="18" fill="#FBBF24"/>
       <line x1="38" y1="42" x2="38" y2="75" stroke="#1F2937" stroke-width="4"/>
       <line x1="50" y1="40" x2="50" y2="76" stroke="#1F2937" stroke-width="4"/>
@@ -306,7 +306,7 @@ const ZHUYIN_DB = {
       <ellipse cx="35" cy="42" rx="14" ry="9" fill="#BAE6FD" opacity="0.7" transform="rotate(-30 35 42)"/>
       <ellipse cx="65" cy="42" rx="14" ry="9" fill="#BAE6FD" opacity="0.7" transform="rotate(30 65 42)"/>`) },
 
-  "ㄦ": { category: "final", word: "耳朵", pinyin: "ㄦˇ ㄉㄨㄛˇ", rhyme: "ㄦ ㄦ ㄦ，耳朵靈靈，聽見美聲音。", color: "#EFF6FF", textColor: "#1D4ED8",
+  "ㄦ": { category: "final", word: "耳朵", words: ["兒子","耳朵","餌料","爾後"], pinyin: "ㄦˇ ㄉㄨㄛˇ", rhyme: "ㄦ ㄦ ㄦ，耳朵靈靈，聽見美聲音。", color: "#EFF6FF", textColor: "#1D4ED8",
     svg: wrapSvg(`<path d="M35 55 Q28 25 50 22 Q68 22 68 42 Q68 58 52 68 Q40 74 44 84" stroke="#FCA5A5" stroke-width="10" stroke-linecap="round" fill="none"/>
       <path d="M46 44 Q42 34 52 36" stroke="#EF4444" stroke-width="3" fill="none" stroke-linecap="round"/>`) }
 };
@@ -499,10 +499,36 @@ function getToneDisplay(symbol) {
 // ==========================================
 // 模式 1：點讀鍵盤功能
 // ==========================================
+// Track word rotation index per card
+const cardWordIndex = {};
+
 function renderKeyboard() {
   const container = document.getElementById("keyboard-grid");
   if (!container) return;
   container.innerHTML = "";
+
+  // Add quiz bar above the grid
+  const quizBar = document.createElement("div");
+  quizBar.id = "quiz-bar";
+  quizBar.className = "quiz-bar";
+  quizBar.innerHTML = `
+    <div class="quiz-bar-left">
+      <button class="quiz-mode-btn active" id="qmode-browse" onclick="setQuizMode('browse')">📖 自由點讀</button>
+      <button class="quiz-mode-btn" id="qmode-listen" onclick="setQuizMode('listen')">🔊 聽音找字</button>
+      <button class="quiz-mode-btn" id="qmode-picture" onclick="setQuizMode('picture')">🖼 看圖猜音</button>
+    </div>
+    <div class="quiz-score" id="quiz-score" style="display:none">
+      ⭐ <span id="quiz-correct">0</span> / <span id="quiz-total">0</span>
+    </div>
+  `;
+  container.appendChild(quizBar);
+
+  // Quiz prompt banner
+  const quizPrompt = document.createElement("div");
+  quizPrompt.id = "quiz-prompt";
+  quizPrompt.className = "quiz-prompt";
+  quizPrompt.style.display = "none";
+  container.appendChild(quizPrompt);
 
   const categories = {
     initial: { title: "聲母 (ㄅ—ㄙ)", class: "category-initial" },
@@ -524,42 +550,77 @@ function renderKeyboard() {
       const item = ZHUYIN_DB[key];
       if (item.category !== cat) return;
 
+      cardWordIndex[key] = 0;
+      const wordList = item.words || [item.word];
+
       const card = document.createElement("div");
       card.className = "zhuyin-card";
-      card.style.backgroundColor = item.color;
       card.id = `card-${key}`;
 
-      card.innerHTML = `
-        <div class="card-inner">
-          <div class="card-front" style="background-color: ${item.color}">
-            <span class="symbol" style="color: ${item.textColor}">${key}</span>
-            <button class="rhyme-btn" id="rhyme-${key}" title="聽口訣">🎵</button>
+      const buildCardHTML = (wIdx) => {
+        const w = wordList[wIdx % wordList.length];
+        return `
+          <div class="card-inner">
+            <div class="card-front" style="background-color: ${item.color}">
+              <span class="symbol" style="color: ${item.textColor}">${key}</span>
+              <button class="rhyme-btn" id="rhyme-${key}" title="聽口訣">🎵</button>
+            </div>
+            <div class="card-back" style="background-color: ${item.color}">
+              <div class="back-svg">${item.svg}</div>
+              <div class="back-word" style="color: ${item.textColor}">${w}</div>
+              <div class="back-pinyin">${item.pinyin}</div>
+              <div class="word-counter" style="color: ${item.textColor}88">${wIdx % wordList.length + 1}/${wordList.length}</div>
+            </div>
           </div>
-          <div class="card-back" style="background-color: ${item.color}">
-            <div class="back-svg">${item.svg}</div>
-            <div class="back-word" style="color: ${item.textColor}">${item.word}</div>
-            <div class="back-pinyin">${item.pinyin}</div>
-          </div>
-        </div>
-      `;
+        `;
+      };
 
-      // 口訣按鈕：不觸發翻牌
-      const rhymeBtn = card.querySelector(`#rhyme-${key}`);
-      rhymeBtn.addEventListener("click", (e) => {
-        e.stopPropagation();
-        unlockAudio();
-        speak(item.rhyme);
-      });
+      card.innerHTML = buildCardHTML(0);
 
-      // 點擊卡片翻轉並發音
+      const attachRhymeBtn = () => {
+        const rhymeBtn = card.querySelector(`#rhyme-${key}`);
+        if (rhymeBtn) {
+          rhymeBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            unlockAudio();
+            // Animate button
+            rhymeBtn.classList.add("playing");
+            setTimeout(() => rhymeBtn.classList.remove("playing"), 1200);
+            speakRhyme(item.rhyme, key);
+          });
+        }
+      };
+      attachRhymeBtn();
+
       card.addEventListener("click", () => {
+        const quizMode = window.currentQuizMode || "browse";
+        if (quizMode !== "browse") {
+          handleQuizAnswer(key, card);
+          return;
+        }
+
         unlockAudio();
-        card.classList.toggle("flipped");
+
         if (card.classList.contains("flipped")) {
-          speak(`${key}。${item.word}`);
-          setTimeout(() => card.classList.remove("flipped"), 4500);
+          // Rotate to next word
+          card.classList.add("rotating");
+          setTimeout(() => {
+            cardWordIndex[key] = (cardWordIndex[key] + 1) % wordList.length;
+            card.innerHTML = buildCardHTML(cardWordIndex[key]);
+            attachRhymeBtn();
+            card.classList.remove("rotating");
+            card.classList.add("flipped");
+            const currentWord = wordList[cardWordIndex[key] % wordList.length];
+            speak(`${key}。${currentWord}`);
+          }, 200);
         } else {
-          speak(key);
+          // Bounce animation then flip
+          card.classList.add("bounce");
+          setTimeout(() => card.classList.remove("bounce"), 400);
+          card.classList.add("flipped");
+          const currentWord = wordList[cardWordIndex[key] % wordList.length];
+          speak(`${key}。${currentWord}`);
+          setTimeout(() => card.classList.remove("flipped"), 5000);
         }
       });
 
@@ -569,6 +630,139 @@ function renderKeyboard() {
     section.appendChild(keysContainer);
     container.appendChild(section);
   });
+}
+
+// Speak rhyme with dramatic pauses
+function speakRhyme(rhyme, key) {
+  const parts = rhyme.split("，");
+  let delay = 0;
+  parts.forEach((part, i) => {
+    setTimeout(() => {
+      speak(part);
+    }, delay);
+    delay += 900;
+  });
+}
+
+// =====================
+// Quiz mode system
+// =====================
+window.currentQuizMode = "browse";
+let quizTarget = null;
+let quizCorrect = 0;
+let quizTotal = 0;
+
+function setQuizMode(mode) {
+  window.currentQuizMode = mode;
+  quizTarget = null;
+
+  // Update buttons
+  document.querySelectorAll(".quiz-mode-btn").forEach(b => b.classList.remove("active"));
+  const activeBtn = document.getElementById(`qmode-${mode}`);
+  if (activeBtn) activeBtn.classList.add("active");
+
+  const scoreEl = document.getElementById("quiz-score");
+  const promptEl = document.getElementById("quiz-prompt");
+
+  // Remove answer highlights from all cards
+  document.querySelectorAll(".zhuyin-card").forEach(c => {
+    c.classList.remove("quiz-correct", "quiz-wrong", "quiz-target", "flipped");
+  });
+
+  if (mode === "browse") {
+    scoreEl.style.display = "none";
+    promptEl.style.display = "none";
+  } else {
+    scoreEl.style.display = "flex";
+    promptEl.style.display = "block";
+    if (mode === "listen") startListenQuiz();
+    else if (mode === "picture") startPictureQuiz();
+  }
+}
+
+function startListenQuiz() {
+  const keys = Object.keys(ZHUYIN_DB);
+  quizTarget = keys[Math.floor(Math.random() * keys.length)];
+  const promptEl = document.getElementById("quiz-prompt");
+  promptEl.innerHTML = `
+    <span class="quiz-prompt-text">🔊 聽聲音，找到正確的注音！</span>
+    <button class="quiz-replay-btn" onclick="replayQuizSound()">🔁 再聽一次</button>
+  `;
+  setTimeout(() => speak(quizTarget), 300);
+
+  // Highlight target card lightly (no cheat mode - keep symbol shown)
+  document.querySelectorAll(".zhuyin-card").forEach(c => {
+    c.classList.remove("quiz-correct", "quiz-wrong", "quiz-target");
+  });
+}
+
+function startPictureQuiz() {
+  const keys = Object.keys(ZHUYIN_DB);
+  quizTarget = keys[Math.floor(Math.random() * keys.length)];
+  const item = ZHUYIN_DB[quizTarget];
+  const wordList = item.words || [item.word];
+  const displayWord = wordList[Math.floor(Math.random() * wordList.length)];
+
+  const promptEl = document.getElementById("quiz-prompt");
+  promptEl.innerHTML = `
+    <span class="quiz-prompt-text">🖼 看圖猜注音：<b style="font-size:1.4em">${displayWord}</b>　是哪個注音？</span>
+  `;
+
+  document.querySelectorAll(".zhuyin-card").forEach(c => {
+    c.classList.remove("quiz-correct", "quiz-wrong", "quiz-target", "flipped");
+  });
+}
+
+function replayQuizSound() {
+  if (quizTarget) speak(quizTarget);
+}
+
+function handleQuizAnswer(key, card) {
+  if (!quizTarget) return;
+  unlockAudio();
+  quizTotal++;
+  document.getElementById("quiz-total").textContent = quizTotal;
+
+  if (key === quizTarget) {
+    // Correct!
+    quizCorrect++;
+    document.getElementById("quiz-correct").textContent = quizCorrect;
+    card.classList.add("quiz-correct");
+    speak(`答對了！${key}，${(ZHUYIN_DB[key].words || [ZHUYIN_DB[key].word])[0]}`);
+
+    // Show confetti burst on card
+    showBurst(card, true);
+
+    setTimeout(() => {
+      card.classList.remove("quiz-correct");
+      if (window.currentQuizMode === "listen") startListenQuiz();
+      else startPictureQuiz();
+    }, 2000);
+  } else {
+    // Wrong
+    card.classList.add("quiz-wrong");
+    showBurst(card, false);
+    speak(`再試試，是${quizTarget}`);
+
+    // Reveal target briefly
+    const targetCard = document.getElementById(`card-${quizTarget}`);
+    if (targetCard) {
+      targetCard.classList.add("quiz-target");
+      setTimeout(() => targetCard.classList.remove("quiz-target"), 1500);
+    }
+
+    setTimeout(() => {
+      card.classList.remove("quiz-wrong");
+    }, 800);
+  }
+}
+
+function showBurst(card, isCorrect) {
+  const burst = document.createElement("div");
+  burst.className = isCorrect ? "burst-correct" : "burst-wrong";
+  burst.textContent = isCorrect ? "🎉" : "❌";
+  card.appendChild(burst);
+  setTimeout(() => burst.remove(), 800);
 }
 
 // ==========================================
